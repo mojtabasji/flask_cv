@@ -2,7 +2,7 @@ from flask import Flask,request,render_template
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def index():
     return '<h>hello moji_:)</h> <button style="height:20px,width:50px">do it</button><p>this is a big bang start .... </p>'
 
