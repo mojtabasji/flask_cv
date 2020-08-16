@@ -1,1 +1,1 @@
-web: py Flask_ai.py runserver 0.0.0.0:5000
+web: py Flask_ai.py runserver 0.0.0.0:7185
