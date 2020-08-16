@@ -3,7 +3,6 @@ gunicorn==19.9.0
 itsdangerous==1.1.0
 MarkupSafe==1.1.1
 Werkzeug==0.15.6
-drozer==2.4.4
 Flask==1.1.2
 Jinja2==2.11.2
 requests==2.22.0
