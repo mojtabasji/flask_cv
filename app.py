@@ -1,14 +1,15 @@
 from flask import Flask,request,render_template
 
-app = Flask(__name__,  static_url_path='')
+app = Flask(__name__, static_url_path='/front-end')
 
 @app.route('/start', methods=['GET','POST'])
 def start():
     return '<h>hello moji_:)</h> <button style="height:20px,width:50px">do it</button><p>this is a big bang start .... </p>'
 
-@app.route('/',method=['GET','POST'])
+@app.route('/',methods=['GET','POST'])
 def index():
-    return app.send_static_file('index.html')
+    return render_template('index.html')
+#    return app.send_static_file('index.html')
 
 @app.route('/moji/bang/<name>', methods=['GET','POST'])
 def bang(name):
