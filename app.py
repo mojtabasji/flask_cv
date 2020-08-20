@@ -1,6 +1,6 @@
 from flask import Flask,request,render_template
 
-app = Flask(__name__)
+app = Flask(__name__,  static_url_path='')
 
 @app.route('/start', methods=['GET','POST'])
 def start():
@@ -8,7 +8,7 @@ def start():
 
 @app.route('/',method=['GET','POST'])
 def index():
-    return index.html
+    return app.send_static_file('index.html')
 
 @app.route('/moji/bang/<name>', methods=['GET','POST'])
 def bang(name):
