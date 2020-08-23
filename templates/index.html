@@ -10,7 +10,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Hola</title>
+    <title>moji</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -26,14 +26,15 @@
 
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
+    <script src="{{url_for('static', filename='js/modernizr.js')}}"></script>
+    <script src="{{url_for('static', filename='js/pace.min.js')}}"></script>
 
     <!-- favicons
     ================================================== -->
-	<link rel="shortcut icon" href="{{url_for('static',filename='base.css')}}">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="{{url_for('static',filename='favicon.ico')}}" type="image/x-icon">
+	<link rel="icon" href="{{url_for('static',filename='favicon.ico')}}" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
 
 </head>
 
@@ -44,7 +45,7 @@
     <header class="s-header">
 
         <div class="header-logo">
-            <a class="site-logo" href="index.html"><img src="images/logo.png" alt="Homepage"></a>
+            <a class="site-logo" href="index.html"><img src="{{url_for('static',filename='images/logo.png')}}" alt="Homepage"></a>
         </div>
 
         <nav class="header-nav-wrap">
@@ -64,7 +65,7 @@
 
    <!-- home
    ================================================== -->
-   <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+   <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="{{url_for('static',filename='images/hero-bg.jpg')}}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
@@ -76,9 +77,9 @@
                 <h3>Hello There</h3>
 
                 <h1>
-                    I am Jonathan Doe. <br>
-                    I am a graphic & UI/UX <br>
-                    designer based in Somewhere.
+                    I am Mojtaba Shojaei. <br>
+                    I am a Back-End developer <br>
+                    sometime i do something for fun.
                 </h1>
 
                 <div class="home-content__buttons">
@@ -108,7 +109,7 @@
                 <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
             </li>
             <li>
-                <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                <a href="https://www.instagram.com/mojtaba_sji/"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
             </li>
             <li>
                 <a href="#"><i class="im im-behance" aria-hidden="true"></i><span>Behance</span></a>
@@ -182,7 +183,7 @@
         <div class="row about-content about-content--buttons">
 
             <div class="col-six tab-full left">
-                <a href="#0" class="btn btn--primary full-width">Download My CV</a>
+                <a href="{{url_for('static',filename='mojicv.pdf')}}" class="btn btn--primary full-width">Download My CV</a>
             </div>
             <div class="col-six tab-full right">
                 <a href="#0" class="btn full-width">Hire Me Now</a>
@@ -282,8 +283,8 @@
 
                         <div class="item-folio__thumb">
                             <a href="images/portfolio/gallery/g-beetle.jpg" class="thumb-link" title="The Beetle Car" data-size="1050x700">
-                                <img src="images/portfolio/beetle.jpg" 
-                                     srcset="images/portfolio/beetle.jpg 1x, images/portfolio/beetle@2x.jpg 2x" alt="">
+                                <img src="{{url_for('static',filename='images/portfolio/beetle.jpg')}}"
+                                     srcset="{{url_for('static',filename='images/portfolio/beetle.jpg 1x, images/portfolio/beetle@2x.jpg 2x')}}" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -313,8 +314,8 @@
 
                         <div class="item-folio__thumb">
                             <a href="images/portfolio/gallery/g-lighthouse.jpg" class="thumb-link" title="Lighthouse" data-size="1050x700">
-                                <img src="images/portfolio/lighthouse.jpg" 
-                                     srcset="images/portfolio/lighthouse.jpg 1x, images/portfolio/lighthouse@2x.jpg 2x" alt="">
+                                <img src="{{url_for('static',filename='images/portfolio/lighthouse.jpg')}}"
+                                     srcset="{{url_for('static',filename='images/portfolio/lighthouse.jpg 1x, images/portfolio/lighthouse@2x.jpg 2x')}}" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -344,8 +345,8 @@
 
                         <div class="item-folio__thumb">
                             <a href="images/portfolio/gallery/g-salad.jpg" class="thumb-link" data-size="1050x700">
-                                <img src="images/portfolio/salad.jpg" 
-                                     srcset="images/portfolio/salad.jpg 1x, images/portfolio/salad@2x.jpg 2x" alt="">
+                                <img src="{{url_for('static',filename='images/portfolio/salad.jpg')}}"
+                                     srcset="{{url_for('static',filename='images/portfolio/salad.jpg 1x, images/portfolio/salad@2x.jpg 2x')}}" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -375,8 +376,8 @@
 
                         <div class="item-folio__thumb">
                             <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" data-size="1050x700">
-                                <img src="images/portfolio/woodcraft.jpg"
-                                     srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
+                                <img src="{{url_for('static',filename='images/portfolio/woodcraft.jpg')}}"
+                                     srcset="{{url_for('static',filename='images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x')}}" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -406,8 +407,8 @@
 
                         <div class="item-folio__thumb">
                             <a href="images/portfolio/gallery/g-skaterboy.jpg" class="thumb-link" data-size="1050x700">
-                                <img src="images/portfolio/skaterboy.jpg"
-                                     srcset="images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x" alt="">
+                                <img src="url_for('static',filename='images/portfolio/skaterboy.jpg')}}"
+                                     srcset="{{url_for('static',filename='images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x')}}" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -437,8 +438,8 @@
 
                         <div class="item-folio__thumb">
                             <a href="images/portfolio/gallery/g-liberty.jpg" class="thumb-link" data-size="1050x700">
-                                <img src="images/portfolio/liberty.jpg"
-                                     srcset="images/portfolio/liberty.jpg 1x, images/portfolio/liberty@2x.jpg 2x" alt="">
+                                <img src="{{url_for('static',filename='images/portfolio/liberty.jpg')}}"
+                                     srcset="{{url_for('static',filename='images/portfolio/liberty.jpg 1x, images/portfolio/liberty@2x.jpg 2x')}}" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -468,8 +469,8 @@
 
                         <div class="item-folio__thumb">
                             <a href="images/portfolio/gallery/g-minimalismo.jpg" class="thumb-link" data-size="1050x700">
-                                <img src="images/portfolio/minimalismo.jpg"
-                                     srcset="images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x" alt="">
+                                <img src="{{url_for('static',filename='images/portfolio/minimalismo.jpg')}}"
+                                     srcset="{{url_for('static',filename='images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x')}}" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -499,8 +500,8 @@
 
                         <div class="item-folio__thumb">
                             <a href="images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" data-size="1050x700">
-                                <img src="images/portfolio/shutterbug.jpg"
-                                     srcset="images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x" alt="">
+                                <img src="{{url_for('static',filename='images/portfolio/shutterbug.jpg')}}"
+                                     srcset="{{url_for('static',filename='images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x')}}" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -549,7 +550,7 @@
             <div class="col-full testimonials__slider">
 
                 <div class="testimonials__slide">
-                    <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
+                    <img src="{{url_for('static',filename='images/avatars/user-01.jpg')}}" alt="Author image" class="testimonials__avatar">
                     <p>Qui ipsam temporibus quisquam velMaiores eos cumque distinctio nam accusantium ipsum. 
                     Laudantium quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui praesentium corpori.</p>
                     <div class="testimonials__author h06">
@@ -559,7 +560,7 @@
                 </div>
 
                 <div class="testimonials__slide">
-                    <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
+                    <img src="{{url_for('static',filename='images/avatars/user-05.jpg')}}" alt="Author image" class="testimonials__avatar">
                     <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
                     Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus quisquam vel.</p>
                     <div class="testimonials__author h06">
@@ -569,7 +570,7 @@
                 </div>
 
                 <div class="testimonials__slide">
-                    <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
+                    <img src="{{url_for('static',filename='images/avatars/user-02.jpg')}}" alt="Author image" class="testimonials__avatar">
                     <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
                     Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.</p>
                     <div class="testimonials__author h06">
@@ -827,7 +828,7 @@
             <div class="col-full">
 
                 <div class="footer-logo">
-                    <a class="footer-site-logo" href="#0"><img src="images/logo.png" alt="Homepage"></a>
+                    <a class="footer-site-logo" href="#0"><img src="{{url_for('static',filename='images/logo.png')}}" alt="Homepage"></a>
                 </div>
 
                 <ul class="footer-social">
@@ -839,7 +840,7 @@
                         <i class="im im-twitter" aria-hidden="true"></i>
                         <span>Twitter</span>
                     </a></li>
-                    <li><a href="#0">
+                    <li><a href="https://www.instagram.com/mojtaba_sji/">
                         <i class="im im-instagram" aria-hidden="true"></i>
                         <span>Instagram</span>
                     </a></li>
@@ -920,9 +921,9 @@
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{url_for('static',filename='js/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/plugins.js')}}"></script>
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
 
 </body>
 
